@@ -1,0 +1,405 @@
+@font-face {
+  font-family: Gilroy;
+  src: url(..//font/Gilroy-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: Gilroy;
+  src: url(..//font/Gilroy-Medium.ttf);
+}
+
+body {
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+li {
+  margin-right: 155.65px;
+}
+
+.menu {
+  font-family: Gilroy;
+  font-size: 18px;
+  color: #828282;
+  width: 940px;
+  display: flex;
+  list-style-type: none;
+  flex-direction: row;
+  margin-top: 33px;
+  padding-left: 0px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #828282;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+#burgerCheck {
+  display: none;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 33px;
+  height: 3.84px;
+  background-color: black;
+  margin: 3.84px 0;
+  transition: 0.4s;
+}
+
+#burgerCheck:checked + .burger .bar1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+  border-radius: 24px;
+}
+
+#burgerCheck:checked + .burger .bar2 {
+  opacity: 0;
+  transform: translate(30px);
+}
+
+#burgerCheck:checked + .burger .bar3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+  border-radius: 24px;
+}
+
+.last {
+  margin-right: 0px;
+}
+
+.home {
+  color: black;
+  font-weight: bold;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 940px;
+  margin-bottom: 30px;
+}
+
+.name {
+  font-family: Gilroy;
+  font-weight: bold;
+  font-size: 47px;
+}
+
+.about {
+  font-family: Gilroy;
+  font-size: 18px;
+  color: black;
+  justify-content: right;
+  padding-top: 55px;
+}
+
+.photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 104px;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  font-family: Gilroy;
+  flex-wrap: wrap;
+  background-color: #f6f6f6;
+  align-items: center;
+}
+
+.article {
+  width: 485.34px;
+  height: 218px;
+  text-align: center;
+  padding-bottom: 107px;
+}
+
+h2 {
+  font-size: 34px;
+  margin-top: 120px;
+  margin-bottom: 17px;
+}
+
+h3 {
+  font-size: 34px;
+  margin-top: 90px;
+  margin-bottom: 69px;
+}
+
+h4 {
+  font-size: 34px;
+  margin-top: 110px;
+  margin-bottom: 20px;
+}
+
+h5 {
+  font-size: 34px;
+  margin-top: 110px;
+}
+.article p {
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  font-family: Gilroy;
+  flex-wrap: wrap;
+  background-color: white;
+  align-items: center;
+  margin-bottom: 110px;
+}
+
+p {
+  font-size: 18px;
+  margin: 0 auto;
+  margin-bottom: 83px;
+}
+
+.programms {
+  display: flex;
+  flex-direction: row;
+  padding-top: 0px;
+}
+
+figure {
+  display: table;
+  text-align: center;
+  margin-inline-end: 45px;
+  margin-inline-start: 45px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.programms figcaption {
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 24px;
+  color: #828282;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  margin-top: 36px;
+}
+
+.black-star {
+  font-size: 33px;
+  margin: 0 auto;
+}
+
+.grey-star {
+  font-size: 33px;
+  color: #E5E5E5;
+  margin: 0 auto;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  font-family: Gilroy;
+  flex-wrap: wrap;
+  background-color: #f6f6f6;
+  align-items: center;
+}
+
+.examples figure {
+  margin-bottom: 99px;
+}
+
+.examples figcaption {
+  font-size: 18px;
+  margin-top: 42px;
+  text-decoration: underline;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  font-family: Gilroy;
+  flex-wrap: wrap;
+  background-color: white;
+  align-items: center;
+}
+
+.contacts p {
+  text-align: center;
+  line-height: 21px;
+  margin-bottom: 39px;
+}
+
+.btn-send-message {
+  font-family: Gilroy;
+  font-size: 18px;
+  background-color: black;
+  color: white;
+  padding: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 24px;
+  border: none;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  padding-top: 0px;
+  justify-content: center;
+  margin-top: 86px;
+}
+
+.social button {
+  background-color: white;
+  border: none;
+  margin-inline-start: 30.5px;
+  margin-inline-end: 30.5px;
+}
+
+.text-und-soc {
+  color: #828282;
+  font-size: 14px;
+  margin-top: 45px;
+}
+
+@media screen and (max-width: 380px) {
+  .menu {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    margin: 0 auto;
+  }
+
+  .burger {
+    display: block;
+    margin: 68px 30px 0px 0px;
+  }
+
+  #burgerCheck {
+    display: none;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin: 65px 0 37px 26px;
+  }
+
+  .about {
+    padding-top: 23px;
+  }
+
+  .photo {
+    display: flex;
+    margin: 0 auto;
+    padding-bottom: 83px;
+    content: url("/img/mobile_photo.png");
+  }
+
+  h2 {
+    margin-top: 82px;
+    margin-bottom: 30px;
+  }
+
+  .article {
+    width: 316px;
+  }
+
+  .article p:last-child {
+    margin-bottom: 0;
+  }
+
+  .skills {
+    flex-wrap: nowrap;
+    margin-bottom: 98px;
+  }
+
+  .skills p {
+    margin-bottom: 70px;
+  }
+
+  h3 {
+    margin-top: 83px;
+    margin-bottom: 50px;
+  }
+
+  .programms {
+    flex-direction: column;
+  }
+
+  .programms figure {
+    margin-bottom: 81px;
+  }
+
+  .programms figure:last-child {
+    margin-bottom: 0px;
+  }
+
+  .programms p {
+    margin-bottom: 0px;
+  }
+
+  .portfolio {
+    flex-wrap: nowrap;
+  }
+
+  h5 {
+    margin-top: 81px;
+    margin-bottom: 65px;
+  }
+
+  .examples figure img {
+    width: 316px;
+    height: 171px;
+  }
+
+  .examples figure {
+    margin-bottom: 77px;
+  }
+
+  .contacts {
+    flex-wrap: nowrap;
+  }
+
+  h4 {
+    margin-top: 84px;
+    margin-bottom: 27px;
+  }
+
+  .btn-send-message {
+    padding: 93px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .social {
+    margin-top: 48px;
+  }
+
+  .social button {
+    margin-inline-start: 25.5px;
+    margin-inline-end: 25.5px;
+  }
+}
