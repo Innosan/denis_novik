@@ -21,22 +21,32 @@ header {
   margin-bottom: 40px;
 }
 
-li {
-  margin-right: 155.65px;
-}
-
 .menu {
   font-family: Gilroy;
   font-size: 18px;
-  color: #828282;
   width: 940px;
   display: flex;
-  list-style-type: none;
   flex-direction: row;
+  justify-content: space-between;
+  position: relative;
   margin-top: 33px;
   padding-left: 0px;
   padding-bottom: 32px;
+  margin-bottom: 20px;
   border-bottom: 1px solid #828282;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.menu a {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-decoration: none;
+  color: #828282;
 }
 
 .burger {
@@ -283,6 +293,14 @@ figure {
 @media screen and (max-width: 380px) {
   .menu {
     display: none;
+    min-width: 375px;
+    position: absolute;
+  }
+
+  .show {
+    display: flex;
+    width: auto;
+    flex-direction: column;
   }
 
   header {
@@ -315,7 +333,7 @@ figure {
     display: flex;
     margin: 0 auto;
     padding-bottom: 83px;
-    content: url("/img/mobile_photo.png");
+    content: url("../img/mobile_photo.png");
   }
 
   h2 {
