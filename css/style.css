@@ -8,8 +8,31 @@
   src: url(..//font/Gilroy-Medium.ttf);
 }
 
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    transition: 1s;
+  }
+
+  to {
+    margin-left: 6.4%;
+    transition: 1s;
+  }
+}
+
+@keyframes textMarg {
+  from {
+    margin-bottom: 0;
+  }
+
+  to {
+    margin-bottom: 68px;
+  }
+}
+
 body {
   margin: 0 auto;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -36,26 +59,43 @@ header {
   border-bottom: 1px solid #828282;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
+.menu a:hover {
+  color: black;
+}
+
+.dropd-cont {
+  font-family: Gilroy;
+  font-size: 34px;
+  display: none;
+  flex-direction: column;
+}
+
+.dropd-cont a {
+  text-decoration: none;
+  color: #828282;
+  font-weight: bold;
+  margin-bottom: 68px;
+}
+
+.dropd-cont a:last-child {
+  margin-bottom: 0;
 }
 
 .menu a {
   display: flex;
+  font-weight: 400;
   flex-direction: column;
   justify-content: flex-start;
   text-decoration: none;
   color: #828282;
+  transition: 0.5s;
 }
 
 .burger {
   display: none;
   cursor: pointer;
-}
-
-#burgerCheck {
-  display: none;
+  border: none;
+  background-color: white;
 }
 
 .bar1, .bar2, .bar3 {
@@ -66,28 +106,23 @@ header {
   transition: 0.4s;
 }
 
-#burgerCheck:checked + .burger .bar1 {
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
   transform: rotate(-45deg) translate(-5px, 6px);
+  background-color: #828282;
   border-radius: 24px;
 }
 
-#burgerCheck:checked + .burger .bar2 {
-  opacity: 0;
+.change .bar2 {
   transform: translate(30px);
+  opacity: 0;
 }
 
-#burgerCheck:checked + .burger .bar3 {
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
   transform: rotate(45deg) translate(-5px, -6px);
+  background-color: #828282;
   border-radius: 24px;
-}
-
-.last {
-  margin-right: 0px;
-}
-
-.home {
-  color: black;
-  font-weight: bold;
 }
 
 .content {
@@ -163,7 +198,6 @@ h5 {
   margin-bottom: 40px;
   font-size: 18px;
 }
-
 
 .skills {
   display: flex;
@@ -299,8 +333,27 @@ figure {
 
   .show {
     display: flex;
+    margin: 66px 0 0 23px;
     width: auto;
+    height: 812px;
     flex-direction: column;
+    position: absolute;
+    width: 110%;
+    background-color: white;
+    animation-name: slidein;
+    animation-duration: 1s;
+    opacity: 1;
+  }
+
+  .show a {
+    margin-bottom: 68px;
+    animation-name: textMarg;
+    animation-duration: 1s;
+  }
+
+  .show a:hover {
+    color: black;
+    transition: 1s;
   }
 
   header {
@@ -313,10 +366,8 @@ figure {
   .burger {
     display: block;
     margin: 68px 30px 0px 0px;
-  }
-
-  #burgerCheck {
-    display: none;
+    background: rgba(0, 0, 0, 0);
+    z-index: 1;
   }
 
   .content {
