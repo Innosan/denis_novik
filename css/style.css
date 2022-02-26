@@ -30,9 +30,12 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0 auto;
-  scroll-behavior: smooth;
 }
 
 header {
